@@ -57,6 +57,10 @@
             padding: 60px 20px;
             text-align: center;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
         }
         .hero img {
             width: 100%;
@@ -71,6 +75,34 @@
         .hero p {
             font-size: 1.4rem;
             margin: 20px 0;
+        }
+        /* Left-hand side with the image */
+        .left {
+            flex: 1; /* Takes up half of the width */
+        }
+        .left img {
+            width: 100%; /* Ensures the image covers the full height */
+            height: 100vh;
+            object-fit: cover; /* Ensures the image doesn't distort */
+        }
+    /* Right-hand side with text and button */
+        .right {
+            flex: 1; /* Takes up the other half of the width */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .right h2, .right p {
+            margin-bottom: 20px;
+        }
+        .right .cta-btn {
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         .cta-btn {
             background-color: #14C971;
@@ -146,10 +178,14 @@
     </header>
 
     <section class="hero">
-        <img src="https://github.com/emalvare/LTV/blob/main/concept_diagram_image.png?raw=true" alt="Internet Connectivity Illustration">
-        <h2>Unlocking Greater Broadband Speeds</h2>
-        <p>We leverage the 20-40% excess capacity on wireless networks to supercharge legacy broadband connections and enable them to compete with fiber internet.</p>
-        <button class="cta-btn">Learn More</button>
+        <div class="left">
+            <img src="https://github.com/emalvare/LTV/blob/main/concept_diagram_image.png?raw=true" alt="Internet Connectivity Illustration">
+        </div>
+        <div class="right">
+            <h2>Unlocking Greater Broadband Speeds</h2>
+            <p>We leverage the 20-40% excess capacity on wireless networks to supercharge legacy broadband connections and enable them to compete with fiber internet.</p>
+            <button class="cta-btn">Learn More</button>
+        </div>
     </section>
 
     <section class="features">
